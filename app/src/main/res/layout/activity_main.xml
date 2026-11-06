@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#06070B"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ================= 1. НАВИГАЦИОННАЯ ШАПКА ================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10121C"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1"
+                android:text="KNP-231 // CORP"
+                android:textColor="#FCEE0A"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="monospace"
+                android:text="CATALOG"
+                android:textColor="#00F0FF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="monospace"
+                android:text="SPECS"
+                android:textColor="#00F0FF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FF003C"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="NET: ON"
+                android:textColor="#06070B"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FCEE0A" />
+
+        <!-- ================= 2. ПЕРВЫЙ ЭКРАН (HERO SECTION) ================= -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#0D0F18"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#FCEE0A"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#1A00F0FF"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:text="NEXT-GEN NEURAL ARCHITECTURE // 2077"
+                    android:textColor="#00F0FF"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.06"
+                    android:shadowColor="#00F0FF"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="20"
+                    android:text="PROJECT KNP-231"
+                    android:textColor="#FCEE0A"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ПРЕВОСХОДСТВО ЗА ГРАНЬЮ БИОЛОГИИ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Официальный дистрибьютор боевых нейроимплантов в Найт-Сити. Прямая синхронизация с центральной нервной системой, нулевая задержка отклика и пожизненная защита от сетевых демонов."
+                    android:textColor="#9BA1B0"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnHeroCta"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FCEE0A"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.1"
+                    android:text="ОФОРМИТЬ ПРЕДЗАКАЗ // 14,999 €$"
+                    android:textColor="#06070B"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="2dp"
+                    app:strokeColor="#FF003C"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="↓ ЛИСТАЙТЕ ВНИЗ ДЛЯ ВЫБОРА КОНФИГУРАЦИИ ↓"
+                    android:textColor="#00F0FF"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ================= 3. ЦИФРЫ И ДОСТИЖЕНИЯ ================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="#121522"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="0.02 ms"
+                    android:textColor="#00F0FF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="monospace"
+                    android:text="ЗАДЕРЖКА СИГНАЛА"
+                    android:textColor="#8A92A6"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:layout_weight="1"
+                android:background="#121522"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="85% MAX"
+                    android:textColor="#FCEE0A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="monospace"
+                    android:text="ЗАМЕДЛЕНИЕ ВРЕМЕНИ"
+                    android:textColor="#8A92A6"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="#121522"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="99.9%"
+                    android:textColor="#FF003C"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="monospace"
+                    android:text="ЗАЩИТА ОТ КИБЕРПСИХОЗА"
+                    android:textColor="#8A92A6"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ================= 4. КАТАЛОГ ИМПЛАНТОВ ================= -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="// 01. КАТАЛОГ БОЕВЫХ МОДУЛЕЙ"
+            android:textColor="#FCEE0A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="#FF003C" />
+
+        <!-- Товар 1: Sandevistan -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="#10121C"
+            app:cardCornerRadius="2dp"
+            app:strokeColor="#00F0FF"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="monospace"
+                        android:text="MILITECH &quot;APOGEE&quot; SANDEVISTAN"
+                        android:textColor="#00F0FF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FCEE0A"
+                        android:fontFamily="monospace"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="2dp"
+                        android:text="ICONIC // TIER 5++"
+                        android:textColor="#06070B"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="Замедляет время на 85%. Увеличивает шанс крит. урона на 20% и критический урон на 35% при активации."
+                    android:textColor="#B0B7C6"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="ЦЕНА: 24,500 €$"
+                    android:textColor="#FCEE0A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Товар 2: Kiroshi Optics -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#10121C"
+            app:cardCornerRadius="2dp"
+            app:strokeColor="#FF003C"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="monospace"
+                        android:text="KIROSHI &quot;ORACLE&quot; OPTICS"
+                        android:textColor="#FF003C"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00F0FF"
+                        android:fontFamily="monospace"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="2dp"
+                        android:text="IN STOCK"
+                        android:textColor="#06070B"
+                        android:textSize="9sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="Автоматическая коррекция экспозиции, рентгеновское сканирование сквозь стены в радиусе 40 метров и подсветка уязвимых узлов."
+                    android:textColor="#B0B7C6"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="ЦЕНА: 9,800 €$"
+                    android:textColor="#FCEE0A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Товар 3: Optical Camo -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#10121C"
+            app:cardCornerRadius="2dp"
+            app:strokeColor="#FCEE0A"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="ARASAKA SUBDERMAL CAMO v4"
+                    android:textColor="#FCEE0A"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text="Преломление света на 95% в течение 7 секунд. Полный выход из поля зрения турелей и вражеских нетраннеров."
+                    android:textColor="#B0B7C6"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="monospace"
+                    android:text="ЦЕНА: 16,200 €$"
+                    android:textColor="#FCEE0A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ================= 5. ТЕЛЕМЕТРИЯ И ТЕСТ ПРОИЗВОДИТЕЛЬНОСТИ ================= -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="// 02. ТЕСТЫ ПРОИЗВОДИТЕЛЬНОСТИ"
+            android:textColor="#FCEE0A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#10121C"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="NEURAL BANDWIDTH (KNP-231): 96%"
+                android:textColor="#00F0FF"
+                android:textSize="11sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="96"
+                android:progressBackgroundTint="#252838"
+                android:progressTint="#00F0FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="monospace"
+                android:text="ICE FIREWALL RESISTANCE: 92%"
+                android:textColor="#FCEE0A"
+                android:textSize="11sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="92"
+                android:progressBackgroundTint="#252838"
+                android:progressTint="#FCEE0A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="monospace"
+                android:text="THERMAL OVERLOAD RISK: 14% (SAFE)"
+                android:textColor="#FF003C"
+                android:textSize="11sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="14"
+                android:progressBackgroundTint="#252838"
+                android:progressTint="#FF003C" />
+        </LinearLayout>
+
+        <!-- ================= 6. КОНФИГУРАТОР ТАРИФА (RADIOBUTTONS) ================= -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="// 03. ВЫБЕРИТЕ ПАКЕТ ПРОШИВКИ"
+            android:textColor="#FCEE0A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#10121C"
+            app:cardCornerRadius="2dp"
+            app:strokeColor="#00F0FF"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="АКТИВНЫЙ ПРОТОКОЛ УСТАНОВКИ:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="#181C2B"
+                        android:buttonTint="#FCEE0A"
+                        android:checked="true"
+                        android:fontFamily="monospace"
+                        android:padding="12dp"
+                        android:text="SOLO MERCENARY // +35% CRIT &amp; REFLEX"
+                        android:textColor="#00F0FF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#181C2B"
+                        android:buttonTint="#FF003C"
+                        android:fontFamily="monospace"
+                        android:padding="12dp"
+                        android:text="GHOST NETRUNNER // STEALTH &amp; QUICKHACKS"
+                        android:textColor="#00F0FF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ================= 7. ОТЗЫВЫ НАЁМНИКОВ ================= -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="// 04. ОТЗЫВЫ ИЗ ПОСМЕРТИЯ (AFTERLIFE)"
+            android:textColor="#FCEE0A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#121522"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="★ ★ ★ ★ ★  //  V_MERC_2077"
+                android:textColor="#FCEE0A"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="monospace"
+                android:text="«Поставил сборку KNP-231 у Виктора Вектора. В связке с Сандевистаном и метательными ножами патруль Арасаки ложится раньше, чем срабатывает тревога.»"
+                android:textColor="#D0D6E2"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#121522"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="★ ★ ★ ★ ★  //  VIKTOR_RIPPERDOC"
+                android:textColor="#00F0FF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="monospace"
+                android:text="«Чистая пайка, стабильная прошивка без скачков напряжения. Лучшее железо на рынке за свои эдди.»"
+                android:textColor="#D0D6E2"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- ================= 8. ФОРМА ЗАПИСИ К РИППЕРДОКУ ================= -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:text="// 05. БРОНИРОВАНИЕ УСТАНОВКИ"
+            android:textColor="#FCEE0A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#10121C"
+            app:cardCornerRadius="2dp"
+            app:strokeColor="#FF003C"
+            app:strokeWidth="1.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="ВВЕДИТЕ ВАШ СЕТЕВОЙ ПСЕВДОНИМ (HANDLE):"
+                    android:textColor="#00F0FF"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/etCyberHandle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#1A1E2E"
+                    android:fontFamily="monospace"
+                    android:hint="Например: Johnny_Silverhand"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#5E667A"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="monospace"
+                    android:text="ЧАСТОТА ХОЛОКОЛЛА (HOLOCALL ID):"
+                    android:textColor="#00F0FF"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/etHolocall"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#1A1E2E"
+                    android:fontFamily="monospace"
+                    android:hint="NC-77-XXXX-XX"
+                    android:inputType="phone"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#5E667A"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbTraumaTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#FCEE0A"
+                    android:checked="true"
+                    android:fontFamily="monospace"
+                    android:text="Включить страховку Trauma Team Platinum"
+                    android:textColor="#D0D6E2"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnExecute"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="#FF003C"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.1"
+                    android:text="ОТПРАВИТЬ ЗАПРОС В КЛИНИКУ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="2dp"
+                    app:strokeColor="#FCEE0A"
+                    app:strokeWidth="1.5dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ================= 9. СИСТЕМНЫЙ ФУТЕР ================= -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="#282E42" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="KNP-231 CYBERWARE DIVISION // WATSON, LITTLE CHINA"
+            android:textColor="#FCEE0A"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="© 2077 NIGHT CITY CORP. ALL RIGHTS RESERVED // PORT: 8080"
+            android:textColor="#5500F0FF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</ScrollView>
